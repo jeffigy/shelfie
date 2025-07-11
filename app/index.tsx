@@ -1,26 +1,31 @@
-import Logo from "@/assets/images/logo_light.png";
-import { Image } from "expo-image";
+import Spacer from "@/components/Spacer";
+import ThemedLogo from "@/components/ThemedLogo";
+import ThemedText from "@/components/ThemedText";
+import ThemedView from "@/components/ThemedView";
 import { Link } from "expo-router";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet } from "react-native";
+
 const index = () => {
   return (
-    <View style={styles.container}>
-      <Image source={Logo} style={styles.img} />
-      <Text style={styles.title}>The number 1</Text>
-      <Text style={{ marginTop: 10, marginBottom: 30 }}>Reading List app</Text>
+    <ThemedView style={styles.container}>
+      <ThemedLogo style={styles.img} />
+      <Spacer height={20} />
+      <ThemedText title={true} style={styles.title}>
+        The number 1
+      </ThemedText>
 
-      <View style={styles.card}>
-        <Text>Hello, this is a card.</Text>
-      </View>
+      <Spacer height={10} />
+      <ThemedText>Reading List app</ThemedText>
+      <Spacer />
 
       <Link href="/about" style={styles.link}>
-        About Page
+        <ThemedText>About Page</ThemedText>
       </Link>
       <Link href="/contact" style={styles.link}>
-        Contact Page
+        <ThemedText>Contact Page</ThemedText>
       </Link>
-    </View>
+    </ThemedView>
   );
 };
 

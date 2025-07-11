@@ -13,6 +13,7 @@ export default function RootLayout() {
         screenOptions={{
           headerStyle: {
             backgroundColor: theme.navBackground,
+            
           },
           headerTintColor: theme.title,
         }}
