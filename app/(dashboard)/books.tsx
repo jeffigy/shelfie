@@ -6,7 +6,7 @@ import { StyleSheet } from "react-native";
 
 const Books = () => {
   return (
-    <ThemedView style={styles.container}>
+    <ThemedView safe={true} style={styles.container}>
       <Spacer />
       <ThemedText title={true} style={styles.heading}>
         Your Readling List
