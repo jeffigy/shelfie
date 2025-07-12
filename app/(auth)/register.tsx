@@ -28,7 +28,7 @@ const Login = () => {
 
       <Spacer height={100} />
 
-      <Link href={"/register"}>
+      <Link href={"/login"}>
         <ThemedText style={{ textAlign: "center" }}>Login instead</ThemedText>
       </Link>
     </ThemedView>
