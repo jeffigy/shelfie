@@ -4,6 +4,7 @@ import ThemedText from "@/components/ThemedText";
 import ThemedTextInput from "@/components/ThemedTextInput";
 import ThemedView from "@/components/ThemedView";
 import { colorValues } from "@/constants/Colors";
+import { useUser } from "@/hooks/userUser";
 import { Link } from "expo-router";
 import React, { useState } from "react";
 import { StyleSheet, Text } from "react-native";
@@ -11,6 +12,7 @@ import { StyleSheet, Text } from "react-native";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const { user } = useUser();
 
   const handleSubmit = () => {
     console.log("register form submitted", email, password);
